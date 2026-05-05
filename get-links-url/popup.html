@@ -47,7 +47,8 @@
   </style>
 </head>
 <body>
-  <h3>Links from Current Window</h3>
+  <h3>Links from Current Window <span id="ver" style="font-size:11px;color:#999;font-weight:normal"></span></h3>
+  <script>document.getElementById('ver').textContent = typeof VERSION !== 'undefined' ? `v${VERSION}` : '';</script>
 
   <div class="mode-toggle">
     <label><input type="radio" name="mode" value="links" /> Links only</label>
@@ -62,6 +63,7 @@
 
   <textarea id="linksBox" readonly placeholder="Output will appear here..."></textarea>
 
-  <script src="popup.js"></script>
 </body>
 </html>
+<script src="popup.js"></script>
+
